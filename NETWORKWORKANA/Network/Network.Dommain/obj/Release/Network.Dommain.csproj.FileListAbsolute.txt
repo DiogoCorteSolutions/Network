@@ -1,0 +1,9 @@
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.dll.config
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.SqlServer.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.SqlServer.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.pdb

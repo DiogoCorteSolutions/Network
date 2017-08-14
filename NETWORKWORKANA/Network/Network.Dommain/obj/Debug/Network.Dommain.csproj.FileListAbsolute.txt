@@ -1,0 +1,10 @@
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll.config
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.csprojResolveAssemblyReference.cache
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.pdb

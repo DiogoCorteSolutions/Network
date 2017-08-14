@@ -1,0 +1,14 @@
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Repositories.dll.config
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Repositories.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Repositories.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\EntityFramework.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\EntityFramework.SqlServer.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Infra.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Dommain.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\Network.Infra.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\EntityFramework.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\bin\Release\EntityFramework.SqlServer.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\obj\Release\Network.Repositories.csprojResolveAssemblyReference.cache
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\obj\Release\Network.Repositories.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Repositories\obj\Release\Network.Repositories.pdb

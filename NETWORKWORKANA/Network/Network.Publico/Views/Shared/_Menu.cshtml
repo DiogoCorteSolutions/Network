@@ -1,0 +1,55 @@
+﻿
+<div class="container">
+    <div class="navbar-header">
+        <a href="@Url.Action("index", "home")" class="navbar-brand">NETWORK</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+            @{
+                if (Network.Publico.Models.LoginModels.IsLogado())
+                {
+                    //if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("administrador"))
+                    if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("adm"))
+                    {
+                        @Html.Partial("_Client");
+                    }
+                    else
+                    {
+                        @Html.Partial("_Admin");
+                    }
+
+
+                    @*if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("administrador"))
+                    {
+                        @Html.Partial("_Admin")
+                    }
+
+                    else if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("cliente"))
+                    {
+                        @Html.Partial("_Client")
+                    }
+
+                    else if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("usuario"))
+                    {
+                        @Html.Partial("_User")
+                    }
+                    else if (Network.Publico.Models.LoginModels.GetLoginModel().Perfil.Contains("operador"))
+                    {
+                        @Html.Partial("_OpNivel1")
+                    }*@
+                }
+            }
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="@Url.Action("informacoes", "home")">@(Network.Publico.Models.LoginModels.IsLogado() ? Network.Publico.Models.LoginModels.GetLoginModel().NomeFuncionario : string.Empty)</a></li>
+            <li><a href="@Url.Action("logoff", "login")">LogOff</a></li>
+        </ul>
+    </div>
+</div>
+
+

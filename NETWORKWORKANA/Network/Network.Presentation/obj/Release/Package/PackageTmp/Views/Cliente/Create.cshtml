@@ -1,0 +1,342 @@
+﻿@using Network.Presentation.Helpers
+@model Network.Presentation.Models.ClienteModels
+@{
+    ViewBag.Title = "Cadastro de Pessoa";
+
+    <style>
+        #example_length {
+            display: none !important;
+        }
+
+        .dataTables_filter {
+            display: none !important;
+        }
+
+        .erro-alert-nome {
+            display: none;
+        }
+
+        .erro-alert {
+            display: block;
+        }
+
+        .dataTables_length {
+            display: none;
+        }
+    </style>
+}
+
+<h2>@ViewBag.Title</h2>
+
+@*<blockquote>
+        <p>@ViewBag.Title</p>
+        <small>Bem <cite title="Source Title">Vindo!!!</cite></small>
+    </blockquote>*@
+<hr />
+@using (Html.BeginForm("Create", "Cliente", FormMethod.Post, new { @class = "form-horizontal", id = "formCadastro", name = "formCadastro" }))
+{
+    if (TempData["msgerror"] != null)
+    {
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @TempData["msgerror"]
+        </div>
+    }
+    else if (TempData["msgsucesso"] != null)
+    {
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @TempData["msgsucesso"]
+        </div>
+    }
+    else if (TempData["msgalerta"] != null)
+    {
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @TempData["msgalerta"]
+        </div>
+    }
+    else if (!ViewContext.ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @Html.ValidationSummary()
+        </div>
+    }
+
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>RazaoSocial</label>
+            @Html.TextBoxFor(x => x.NomeRazaoSocial, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Nome Fantasia</label>
+            @Html.TextBoxFor(x => x.ApelidoNomeFantasia, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Contato</label>
+            @Html.TextBoxFor(x => x.Contato, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Telefone</label>
+            @Html.TextBoxFor(x => x.Telefone1, new { @class = "form-control", @placeholder = "", @onchange = "MascaraTelefone(formCadastro.Telefone1);", @maxlength = "11" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Telefone</label>
+            @Html.TextBoxFor(x => x.Telefone2, new { @class = "form-control", @placeholder = "", @onchange = "MascaraTelefone(formCadastro.Telefone2);", @maxlength = "11" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Fax</label>
+            @Html.TextBoxFor(x => x.Fax, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>CNPJ</label>
+            @Html.TextBoxFor(x => x.Cnpj, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCNPJ(formCadastro.Cnpj);", @maxlength = "14" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>CPF</label>
+            @Html.TextBoxFor(x => x.Cpf, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCPF(formCadastro.Cpf);", @maxlength = "11" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Incrição Estadual</label>
+            @Html.TextBoxFor(x => x.IncricaoEstadualRg, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Endereco</label>
+            @Html.TextBoxFor(x => x.Endereco1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Numero</label>
+            @Html.TextBoxFor(x => x.Numero1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Cidade</label>
+            @Html.TextBoxFor(x => x.Cidade1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>UF</label>
+            @Html.TextBoxFor(x => x.Uf1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>CEP </label>
+            @Html.TextBoxFor(x => x.Cep1, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCep(formCadastro.Cep1);", @maxlength = "8" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Endereco</label>
+            @Html.TextBoxFor(x => x.Endereco2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Numero</label>
+            @Html.TextBoxFor(x => x.Numero2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Cidade</label>
+            @Html.TextBoxFor(x => x.Cidade2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>UF</label>
+            @Html.TextBoxFor(x => x.Uf2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    @*<div class="col-md-2">
+            <div class="form-group">
+                <label>CEP</label>
+                 @Html.TextBoxFor(x => x.Cep2, new { @class = "form-control", onchange = "GetZip('cliente')", data_mask = "99999-999", placeholder = "", required = "required" })
+            </div>
+        </div>*@
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>CEP </label>
+            @Html.TextBoxFor(x => x.Cep2, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCep(formCadastro.Cep2);", @maxlength = "8" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Referencia</label>
+            @Html.TextBoxFor(x => x.Referencia1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Telefone Referencia</label>
+            @Html.TextBoxFor(x => x.TelefoneReferencia1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Email Referencia</label>
+            @Html.TextBoxFor(x => x.EmailReferencia1, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Data de Nascimento</label>
+            @Html.TextBoxFor(x => x.DataNascimento, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataNascimento);", @maxlength = "8" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Referencia</label>
+            @Html.TextBoxFor(x => x.Referencia2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Telefone Referencia</label>
+            @Html.TextBoxFor(x => x.Referencia2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Telefone Referencia</label>
+            @Html.TextBoxFor(x => x.TelefoneReferncia2, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Renda</label>
+            @Html.TextBoxFor(x => x.Renda, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Credito</label>
+            @Html.TextBoxFor(x => x.Credito, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    @*<div class="col-md-2">
+            <div class="form-group">
+                <label>Código Municipio</label>
+                @Html.TextBoxFor(x => x.CodMunicipio, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>*@
+    @*<div class="col-md-2">
+            <div class="form-group">
+                <label>Classificação</label>
+                @Html.TextBoxFor(x => x.Classificacao, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>*@
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Tipo Regiao</label>
+            @Html.TextBoxFor(x => x.TipoRegiao, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div>
+        <input type="checkbox" name="spc" value="spc" />SPC
+        <br />
+        <input type="checkbox" name="serasa" value="serasa" />SERASA
+        <br />
+        <input type="checkbox" name="telecheque" value="telecheque" />TELECHEQUE
+        <br />
+        <input type="checkbox" name="bloquieado" value="bloquieado" />BLOQUEIADO
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Profissão</label>
+            @Html.TextBoxFor(x => x.ProfissaoRamo, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Vendedor</label>
+            @Html.TextBoxFor(x => x.VendedorAtendente, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Trasportadora</label>
+            @Html.TextBoxFor(x => x.Trasportadora, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    @*<div class="col-md-2">
+        <div class="form-group">
+            <label>Sexo</label>
+            @Html.TextBoxFor(x => x.Sexo, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>*@
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Data de Cadastro</label>
+            @Html.TextBoxFor(x => x.DataCadastro, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataCadastro);", @maxlength = "8" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Trasportadora</label>
+            @Html.TextBoxFor(x => x.Trasportadora, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div>
+        <div class="teste-float" margin:auto>
+            <label>Observacao</label>
+            @Html.TextAreaFor(x => x.Observacao, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+
+
+    <div id="alerta-div" style="display: none;"></div>
+
+    <hr />
+
+    <div class="col-md-12">
+        <div class="form-group m-t-10">
+            <button id="btn-all-valid" name="btn-all-valid" type="submit" class="btn btn-success btn-custom waves-effect w-md m-b-5"><i class="fa fa-save"></i>&ensp;Salvar</button>
+            <a id="btn-all" name="btn-all" href="@Url.Action("index", "cliente")" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
+
+        </div>
+    </div>
+
+
+    <script src="@Url.Content("~/Scripts/views/commonViews.js")"></script>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\CrossCounting.dll.config
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\CrossCounting.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\CrossCounting.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\Correios.Net.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EntityFramework.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EntityFramework.SqlServer.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EPPlus.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\Newtonsoft.Json.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\Correios.Net.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EntityFramework.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EntityFramework.SqlServer.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\EPPlus.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\Newtonsoft.Json.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\bin\Debug\Newtonsoft.Json.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\obj\Debug\CrossCounting.csprojResolveAssemblyReference.cache
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\obj\Debug\CrossCounting.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\CrossCounting\obj\Debug\CrossCounting.pdb

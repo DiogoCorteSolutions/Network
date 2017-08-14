@@ -1,0 +1,12 @@
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\Network.Infra.dll.config
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\Network.Infra.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\Network.Infra.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\EntityFramework.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\EntityFramework.SqlServer.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\Network.Dommain.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\Network.Dommain.pdb
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\EntityFramework.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\bin\Release\EntityFramework.SqlServer.xml
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\obj\Release\Network.Infra.csprojResolveAssemblyReference.cache
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\obj\Release\Network.Infra.dll
+D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Infra\obj\Release\Network.Infra.pdb
