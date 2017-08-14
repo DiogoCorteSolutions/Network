@@ -1,4 +1,5 @@
-﻿using Network.Dommain;
+﻿using CrossCounting.Helpers;
+using Network.Dommain;
 using Network.Presentation.Models;
 using System;
 using System.Collections.Generic;
@@ -119,13 +120,13 @@ namespace Network.Presentation.Controllers
         }
 
 
-        //public ActionResult Download()
-        //{
-        //    var dataTable = this.Download .Relatorio();
-        //    var fileResult = ExportFileHelper.ToExcel("cliente", "~/content/arquivo/relatorio/", ".xls", dataTable);
+        public ActionResult Download()
+        {
+            var dataTable = this.usuarioApp.Relatorio();
+            var fileResult = ExportFileHelper.ToExcel("usuario", "~/content/arquivo/relatorio/", ".xls", dataTable);
 
-        //    return File(fileResult, "application/vnd.ms-excel");
-        //}
+            return File(fileResult, "application/vnd.ms-excel");
+        }
 
     }
 }

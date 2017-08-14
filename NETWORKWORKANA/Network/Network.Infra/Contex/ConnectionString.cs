@@ -12,7 +12,7 @@ namespace Network.Infra.Contex
         {
             get
             {
-                return System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                return System.Configuration.ConfigurationManager.ConnectionStrings["DbDefaultContext"].ConnectionString;
             }
         }
     }

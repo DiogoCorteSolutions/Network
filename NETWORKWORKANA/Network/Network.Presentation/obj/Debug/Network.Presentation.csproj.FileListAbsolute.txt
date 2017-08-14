@@ -54,3 +54,9 @@ D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\EntityFramework.
 D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\obj\Debug\Network.Presentation.csprojResolveAssemblyReference.cache
 D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\obj\Debug\Network.Presentation.dll
 D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\obj\Debug\Network.Presentation.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\CrossCounting.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\Correios.Net.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\EPPlus.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\CrossCounting.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\Correios.Net.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Presentation\bin\EPPlus.xml

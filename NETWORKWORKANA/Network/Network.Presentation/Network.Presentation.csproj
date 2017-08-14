@@ -338,6 +338,10 @@
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrossCounting\CrossCounting.csproj">
+      <Project>{f2f5adcd-c0ef-4a15-8d2b-bb709fe51221}</Project>
+      <Name>CrossCounting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Network.Application\Network.Application.csproj">
       <Project>{0506d43a-b754-4e32-b85a-20ea4375f66a}</Project>
       <Name>Network.Application</Name>

@@ -1,6 +1,7 @@
 ﻿using Network.Dommain;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,6 +56,11 @@ namespace Network.Application
         public networkusuario Login(string senha, string cpf)
         {
             return this.repositorio.Login(senha, cpf);
+        }
+
+        public DataTable Relatorio()
+        {
+            return this.repositorio.Relatorio();
         }
 
         public void Dispose()
