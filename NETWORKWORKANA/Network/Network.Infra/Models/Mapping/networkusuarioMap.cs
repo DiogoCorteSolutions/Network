@@ -64,6 +64,11 @@ namespace Network.Infra.Models.Mapping
 
             this.Property(t => t.Email)
                 .HasMaxLength(100);
+           
+            this.Property(t => t.Cargo)
+                .HasMaxLength(100);
+
+            
 
 
 
@@ -75,7 +80,7 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.NomeFuncionario).HasColumnName("NomeFuncionario");
             this.Property(t => t.CodigoFuncionario).HasColumnName("CodigoFuncionario");
             this.Property(t => t.Setor).HasColumnName("Setor");
-            this.Property(t => t.DataEmaissao).HasColumnName("DataEmaissao");
+            this.Property(t => t.DataEmissao).HasColumnName("DataEmissao");
             this.Property(t => t.Salario).HasColumnName("Salario");
             this.Property(t => t.Carteiratrabalho).HasColumnName("Carteiratrabalho");
             this.Property(t => t.CarteiraMotorista).HasColumnName("CarteiraMotorista");
@@ -92,6 +97,7 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Perfil).HasColumnName("Perfil");
             this.Property(t => t.Sexo).HasColumnName("Sexo");
             this.Property(t => t.Email).HasColumnName("Email");
+            this.Property(t => t.Cargo).HasColumnName("Cargo");
         }
     }
 }

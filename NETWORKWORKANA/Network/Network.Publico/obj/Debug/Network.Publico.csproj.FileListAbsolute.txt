@@ -1,1 +1,2 @@
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Publico\obj\Debug\Network.Publico.csprojResolveAssemblyReference.cache
+D:\workspacegit\NETWORKWORKANA\Network\Network.Publico\obj\Debug\Network.Publico.csprojResolveAssemblyReference.cache

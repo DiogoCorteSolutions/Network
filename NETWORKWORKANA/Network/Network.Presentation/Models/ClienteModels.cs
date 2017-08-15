@@ -31,7 +31,7 @@ namespace Network.Presentation.Models
         public string Referencia1 { get; set; }
         public string TelefoneReferencia1 { get; set; }
         public string EmailReferencia1 { get; set; }
-        public Nullable<System.DateTime> DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
         public string Referencia2 { get; set; }
         public string TelefoneReferncia2 { get; set; }
         public Nullable<decimal> Renda { get; set; }

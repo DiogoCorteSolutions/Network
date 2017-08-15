@@ -9,7 +9,7 @@ namespace Network.Dommain
         public string NomeFuncionario { get; set; }
         public string CodigoFuncionario { get; set; }
         public string Setor { get; set; }
-        public Nullable<System.DateTime> DataEmaissao { get; set; }
+        public string DataEmissao { get; set; }
         public Nullable<decimal> Salario { get; set; }
         public string Carteiratrabalho { get; set; }
         public string CarteiraMotorista { get; set; }
@@ -26,5 +26,6 @@ namespace Network.Dommain
         public string Perfil { get; set; }
         public string Email { get; set; }
         public string Sexo { get; set; }
+        public string Cargo { get; set; }
     }
 }

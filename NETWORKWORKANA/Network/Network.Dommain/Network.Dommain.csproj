@@ -51,6 +51,7 @@
     <Compile Include="networkcontasapagar.cs" />
     <Compile Include="networkcontasareceber.cs" />
     <Compile Include="networkfornecedore.cs" />
+    <Compile Include="networkperfil.cs" />
     <Compile Include="networkproduto.cs" />
     <Compile Include="networkusuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

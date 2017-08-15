@@ -30,5 +30,6 @@ namespace Network.Dommain
         public string Observacao { get; set; }
         public string Contato { get; set; }
         public string Email { get; set; }
+        public string Fax { get; set; }
     }
 }

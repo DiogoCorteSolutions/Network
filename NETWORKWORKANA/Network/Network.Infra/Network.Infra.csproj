@@ -54,6 +54,7 @@
     <Compile Include="Models\Mapping\networkcontasapagarMap.cs" />
     <Compile Include="Models\Mapping\networkcontasareceberMap.cs" />
     <Compile Include="Models\Mapping\networkfornecedoreMap.cs" />
+    <Compile Include="Models\Mapping\networkperfilMap.cs" />
     <Compile Include="Models\Mapping\networkprodutoMap.cs" />
     <Compile Include="Models\Mapping\networkusuarioMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

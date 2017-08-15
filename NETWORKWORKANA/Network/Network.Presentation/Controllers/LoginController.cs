@@ -41,7 +41,7 @@ namespace Network.Presentation.Controllers
                     Cidade = retorno.Cidade,
                     CodigoFuncionario = retorno.CodigoFuncionario,
                     Cpf = retorno.Cpf,
-                    DataEmaissao = retorno.DataEmaissao,
+                    DataEmissao = retorno.DataEmissao,
                     Endereco = retorno.Endereco,
                     Fone1 = retorno.Fone1,
                     Fone2 = retorno.Fone2,
@@ -50,6 +50,7 @@ namespace Network.Presentation.Controllers
                     Sexo = retorno.Sexo,
                     Status = retorno.Status,
                     Rg = retorno.Rg,
+                    Senha = retorno.Senha,
                     
 
                 });

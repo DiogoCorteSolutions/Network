@@ -9,14 +9,16 @@ using System.Web.Mvc;
 
 namespace Network.Presentation.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuarioController : BaseController
     {
         private readonly Application.UsuarioApplication usuarioApp;
+        private readonly Application.PerfilApplication perfilApp;
 
         // GET: Cliente
         public UsuarioController()
         {
             this.usuarioApp = new Application.UsuarioApplication();
+            this.perfilApp = new Application.PerfilApplication();
         }
         public ActionResult Index()
         {
@@ -31,7 +33,7 @@ namespace Network.Presentation.Controllers
                     NomeFuncionario = item.NomeFuncionario,
                     CodigoFuncionario = item.CodigoFuncionario,
                     Setor = item.Setor,
-                    DataEmaissao = item.DataEmaissao,
+                    DataEmissao = item.DataEmissao,
                     Salario = item.Salario,
                     Carteiratrabalho = item.Carteiratrabalho,
                     CarteiraMotorista = item.CarteiraMotorista,
@@ -43,22 +45,20 @@ namespace Network.Presentation.Controllers
                     Ud = item.Ud,
                     Fone1 = item.Fone1,
                     Fone2 = item.Fone2,
-                    Status = item.Status,
                     Senha = item.Senha,
                     Perfil = item.Perfil,
                     Email = item.Email,
-                    Sexo = item.Sexo,
+                    Cargo = item.Cargo,
+
 
                 };
                 model.Add(objeto);
             }
             return View(model);
         }
-
         public ActionResult Create()
         {
             var model = new UsuarioModels();
-
             return View(model);
         }
         [HttpPost]
@@ -75,7 +75,7 @@ namespace Network.Presentation.Controllers
                     NomeFuncionario = model.NomeFuncionario,
                     CodigoFuncionario = model.CodigoFuncionario,
                     Setor = model.Setor,
-                    DataEmaissao = Convert.ToDateTime(model.DataEmaissao),
+                    DataEmissao = model.DataEmissao,
                     Salario = model.Salario,
                     Carteiratrabalho = model.Carteiratrabalho,
                     CarteiraMotorista = model.CarteiraMotorista,
@@ -119,7 +119,149 @@ namespace Network.Presentation.Controllers
             }
         }
 
+        //public ActionResult Editar(int id)
+        //{
+        //    var filtro = this.usuarioApp.ListarPorId(id);
 
+        //    var model = new UsuarioModels
+        //    {
+        //        IdUsuario = filtro.IdUsuario,
+        //        NomeFuncionario = filtro.NomeFuncionario,
+        //        CodigoFuncionario = filtro.CodigoFuncionario,
+        //        Setor = filtro.Setor,
+        //        DataEmissao = filtro.DataEmissao,
+        //        Salario = filtro.Salario,
+        //        Carteiratrabalho = filtro.Carteiratrabalho,
+        //        CarteiraMotorista = filtro.CarteiraMotorista,
+        //        Rg = filtro.Rg,
+        //        Cpf = filtro.Cpf,
+        //        Endereco = filtro.Endereco,
+        //        Bairro = filtro.Bairro,
+        //        Cidade = filtro.Cidade,
+        //        Ud = filtro.Ud,
+        //        Fone1 = filtro.Fone1,
+        //        Fone2 = filtro.Fone2,
+        //        //Status = filtro.Status,
+        //        Senha = filtro.Senha,
+        //        Perfil = filtro.Perfil,
+        //        Email = filtro.Email,
+        //        //Sexo = filtro.Sexo,
+        //    };
+
+        //    //model.DdlOperadora = OperadoraLista();
+        //    //model.DdlTipoPessoa = TipoPessoaLista();
+        //    //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
+        //    //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
+        //    //model.DdlTipoEnderecoLista = TipoEnderecoLista();
+        //    //model.DdlTipoTelefoneLista = TipoTelefoneLista();
+
+        //    return View(model);
+        //}
+        //[HttpPost]
+        //public ActionResult Editar(UsuarioModels model)
+        //{
+
+
+        //    try
+        //    {
+        //        var filtro = this.usuarioApp.ListarPorId(model.IdUsuario);
+
+        //        filtro.IdUsuario = model.IdUsuario;
+        //        filtro.NomeFuncionario = model.NomeFuncionario;
+        //        filtro.CodigoFuncionario = model.CodigoFuncionario;
+        //        filtro.Setor = model.Setor;
+        //        filtro.DataEmissao = model.DataEmissao;
+        //        filtro.Salario = model.Salario;
+        //        filtro.Carteiratrabalho = model.Carteiratrabalho;
+        //        filtro.CarteiraMotorista = model.CarteiraMotorista;
+        //        filtro.Rg = model.Rg;
+        //        filtro.Cpf = model.Cpf;
+        //        filtro.Endereco = model.Endereco;
+        //        filtro.Bairro = model.Bairro;
+        //        filtro.Cidade = model.Cidade;
+        //        filtro.Ud = model.Ud;
+        //        filtro.Fone1 = model.Fone1;
+        //        filtro.Fone2 = model.Fone2;
+        //        //filtro.//Status = model.Status;
+        //        filtro.Senha = model.Senha;
+        //        filtro.Perfil = model.Perfil;
+        //        filtro.Email = model.Email;
+        //        //filtro.//Sexo = model.Sexo;
+
+        //        if (ModelState.IsValid)
+        //        {
+        //            this.usuarioApp.Atualizar(filtro);
+        //            TempData["msgsucesso"] = "Registro atualizado com sucesso!";
+
+        //        }
+
+
+        //        return View(model);
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        TempData["msgerror"] = exception.Message.ToString();
+        //        return View(model);
+        //    }
+        //}
+
+        //public ActionResult Details(int id)
+        //{
+        //    var filtro = this.usuarioApp.ListarPorId(id);
+
+        //    var model = new UsuarioModels
+        //    {
+        //        IdUsuario = filtro.IdUsuario,
+        //        NomeFuncionario = filtro.NomeFuncionario,
+        //        CodigoFuncionario = filtro.CodigoFuncionario,
+        //        Setor = filtro.Setor,
+        //        DataEmissao = filtro.DataEmissao,
+        //        Salario = filtro.Salario,
+        //        Carteiratrabalho = filtro.Carteiratrabalho,
+        //        CarteiraMotorista = filtro.CarteiraMotorista,
+        //        Rg = filtro.Rg,
+        //        Cpf = filtro.Cpf,
+        //        Endereco = filtro.Endereco,
+        //        Bairro = filtro.Bairro,
+        //        Cidade = filtro.Cidade,
+        //        Ud = filtro.Ud,
+        //        Fone1 = filtro.Fone1,
+        //        Fone2 = filtro.Fone2,
+        //        //Status = filtro.Status,
+        //        Senha = filtro.Senha,
+        //        Perfil = filtro.Perfil,
+        //        Email = filtro.Email,
+        //        //Sexo = filtro.Sexo,
+
+        //    };
+
+        //    //model.DdlOperadora = OperadoraLista();
+        //    //model.DdlTipoPessoa = TipoPessoaLista();
+        //    //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
+        //    //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
+        //    //model.DdlTipoEnderecoLista = TipoEnderecoLista();
+        //    //model.DdlTipoTelefoneLista = TipoTelefoneLista();
+
+        //    return View(model);
+        //}
+
+        //public ActionResult Excluir(int id)
+        //{
+        //    try
+        //    {
+        //        this.usuarioApp.Excluir(id);
+        //        TempData["msgsucesso"] = "Registro excluido com sucesso!";
+
+        //        return RedirectToAction("create", "usuario");
+
+        //    }
+
+        //    catch (Exception exception)
+        //    {
+        //        TempData["msgerror"] = exception.Message.ToString();
+        //        return RedirectToAction("index", "usuario");
+        //    }
+        //}
         public ActionResult Download()
         {
             var dataTable = this.usuarioApp.Relatorio();

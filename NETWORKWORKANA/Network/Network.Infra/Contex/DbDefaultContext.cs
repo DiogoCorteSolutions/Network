@@ -27,6 +27,7 @@ namespace Network.Infra.Contex
         public DbSet<networkcontasapagar> networkcontasapagars { get; set; }
         public DbSet<networkcontasareceber> networkcontasarecebers { get; set; }
         public DbSet<networkfornecedore> networkfornecedores { get; set; }
+        public DbSet<networkperfil> networkperfils { get; set; }
         public DbSet<networkproduto> networkprodutos { get; set; }
         public DbSet<networkusuario> networkusuarios { get; set; }
 
@@ -37,6 +38,7 @@ namespace Network.Infra.Contex
             modelBuilder.Configurations.Add(new networkcontasapagarMap());
             modelBuilder.Configurations.Add(new networkcontasareceberMap());
             modelBuilder.Configurations.Add(new networkfornecedoreMap());
+            modelBuilder.Configurations.Add(new networkperfilMap());
             modelBuilder.Configurations.Add(new networkprodutoMap());
             modelBuilder.Configurations.Add(new networkusuarioMap());
         }

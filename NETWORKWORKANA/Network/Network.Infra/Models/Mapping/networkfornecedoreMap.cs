@@ -81,6 +81,9 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Email)
                 .HasMaxLength(200);
 
+            this.Property(t => t.Fax)
+                .HasMaxLength(200);
+
             // Table & Column Mappings
             this.ToTable("networkfornecedores");
             this.Property(t => t.IdFornecedor).HasColumnName("IdFornecedor");
@@ -108,6 +111,7 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Observacao).HasColumnName("Observacao");
             this.Property(t => t.Contato).HasColumnName("Contato");
             this.Property(t => t.Email).HasColumnName("Email");
+            this.Property(t => t.Fax).HasColumnName("Fax");
         }
     }
 }

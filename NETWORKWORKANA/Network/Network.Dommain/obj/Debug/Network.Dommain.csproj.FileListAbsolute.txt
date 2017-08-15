@@ -8,3 +8,13 @@ D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Entit
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.csprojResolveAssemblyReference.cache
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.dll
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll.config
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.xml
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.xml
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.dll
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.pdb
+D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.csprojResolveAssemblyReference.cache

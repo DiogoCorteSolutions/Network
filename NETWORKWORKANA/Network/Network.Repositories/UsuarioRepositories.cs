@@ -12,7 +12,6 @@ namespace Network.Repositories
 {
     public class UsuarioRepositories
     {
-
         private readonly Infra.Contex.DbDefaultContext context;
         private readonly Infra.Contex.ConnectionString connectionString;
         public UsuarioRepositories()
