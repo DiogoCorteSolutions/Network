@@ -1,0 +1,9 @@
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\TesteODS.dll.config
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\TesteODS.dll
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\TesteODS.pdb
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\EntityFramework.dll
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\EntityFramework.SqlServer.dll
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\EntityFramework.xml
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\bin\Debug\EntityFramework.SqlServer.xml
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\obj\Debug\TesteODS.dll
+D:\workspacegit\NETWORKWORKANA\Network\TesteODS\obj\Debug\TesteODS.pdb

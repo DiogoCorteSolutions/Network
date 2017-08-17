@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteApplication.cs" />
+    <Compile Include="ComposicaoApplication.cs" />
     <Compile Include="FornecedorApplication.cs" />
     <Compile Include="PerfilApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

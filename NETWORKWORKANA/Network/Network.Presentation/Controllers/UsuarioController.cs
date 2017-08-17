@@ -119,149 +119,151 @@ namespace Network.Presentation.Controllers
             }
         }
 
-        //public ActionResult Editar(int id)
-        //{
-        //    var filtro = this.usuarioApp.ListarPorId(id);
+        public ActionResult Editar(int id)
+        {
+            var filtro = this.usuarioApp.ListarPorId(id);
 
-        //    var model = new UsuarioModels
-        //    {
-        //        IdUsuario = filtro.IdUsuario,
-        //        NomeFuncionario = filtro.NomeFuncionario,
-        //        CodigoFuncionario = filtro.CodigoFuncionario,
-        //        Setor = filtro.Setor,
-        //        DataEmissao = filtro.DataEmissao,
-        //        Salario = filtro.Salario,
-        //        Carteiratrabalho = filtro.Carteiratrabalho,
-        //        CarteiraMotorista = filtro.CarteiraMotorista,
-        //        Rg = filtro.Rg,
-        //        Cpf = filtro.Cpf,
-        //        Endereco = filtro.Endereco,
-        //        Bairro = filtro.Bairro,
-        //        Cidade = filtro.Cidade,
-        //        Ud = filtro.Ud,
-        //        Fone1 = filtro.Fone1,
-        //        Fone2 = filtro.Fone2,
-        //        //Status = filtro.Status,
-        //        Senha = filtro.Senha,
-        //        Perfil = filtro.Perfil,
-        //        Email = filtro.Email,
-        //        //Sexo = filtro.Sexo,
-        //    };
+            var model = new UsuarioModels
+            {
+                IdUsuario = filtro.IdUsuario,
+                NomeFuncionario = filtro.NomeFuncionario,
+                CodigoFuncionario = filtro.CodigoFuncionario,
+                Setor = filtro.Setor,
+                DataEmissao = filtro.DataEmissao,
+                Salario = filtro.Salario,
+                Carteiratrabalho = filtro.Carteiratrabalho,
+                CarteiraMotorista = filtro.CarteiraMotorista,
+                Rg = filtro.Rg,
+                Cpf = filtro.Cpf,
+                Endereco = filtro.Endereco,
+                Bairro = filtro.Bairro,
+                Cidade = filtro.Cidade,
+                Ud = filtro.Ud,
+                Fone1 = filtro.Fone1,
+                Fone2 = filtro.Fone2,
+                //Status = filtro.Status,
+                Senha = filtro.Senha,
+                Perfil = filtro.Perfil,
+                Email = filtro.Email,
+                Cargo = filtro.Cargo,
+                //Sexo = filtro.Sexo,
+            };
 
-        //    //model.DdlOperadora = OperadoraLista();
-        //    //model.DdlTipoPessoa = TipoPessoaLista();
-        //    //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
-        //    //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
-        //    //model.DdlTipoEnderecoLista = TipoEnderecoLista();
-        //    //model.DdlTipoTelefoneLista = TipoTelefoneLista();
+            //model.DdlOperadora = OperadoraLista();
+            //model.DdlTipoPessoa = TipoPessoaLista();
+            //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
+            //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
+            //model.DdlTipoEnderecoLista = TipoEnderecoLista();
+            //model.DdlTipoTelefoneLista = TipoTelefoneLista();
 
-        //    return View(model);
-        //}
-        //[HttpPost]
-        //public ActionResult Editar(UsuarioModels model)
-        //{
-
-
-        //    try
-        //    {
-        //        var filtro = this.usuarioApp.ListarPorId(model.IdUsuario);
-
-        //        filtro.IdUsuario = model.IdUsuario;
-        //        filtro.NomeFuncionario = model.NomeFuncionario;
-        //        filtro.CodigoFuncionario = model.CodigoFuncionario;
-        //        filtro.Setor = model.Setor;
-        //        filtro.DataEmissao = model.DataEmissao;
-        //        filtro.Salario = model.Salario;
-        //        filtro.Carteiratrabalho = model.Carteiratrabalho;
-        //        filtro.CarteiraMotorista = model.CarteiraMotorista;
-        //        filtro.Rg = model.Rg;
-        //        filtro.Cpf = model.Cpf;
-        //        filtro.Endereco = model.Endereco;
-        //        filtro.Bairro = model.Bairro;
-        //        filtro.Cidade = model.Cidade;
-        //        filtro.Ud = model.Ud;
-        //        filtro.Fone1 = model.Fone1;
-        //        filtro.Fone2 = model.Fone2;
-        //        //filtro.//Status = model.Status;
-        //        filtro.Senha = model.Senha;
-        //        filtro.Perfil = model.Perfil;
-        //        filtro.Email = model.Email;
-        //        //filtro.//Sexo = model.Sexo;
-
-        //        if (ModelState.IsValid)
-        //        {
-        //            this.usuarioApp.Atualizar(filtro);
-        //            TempData["msgsucesso"] = "Registro atualizado com sucesso!";
-
-        //        }
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Editar(UsuarioModels model)
+        {
 
 
-        //        return View(model);
-        //    }
-        //    catch (Exception exception)
-        //    {
-        //        TempData["msgerror"] = exception.Message.ToString();
-        //        return View(model);
-        //    }
-        //}
+            try
+            {
+                var filtro = this.usuarioApp.ListarPorId(model.IdUsuario);
 
-        //public ActionResult Details(int id)
-        //{
-        //    var filtro = this.usuarioApp.ListarPorId(id);
+                filtro.IdUsuario = model.IdUsuario;
+                filtro.NomeFuncionario = model.NomeFuncionario;
+                filtro.CodigoFuncionario = model.CodigoFuncionario;
+                filtro.Setor = model.Setor;
+                filtro.DataEmissao = model.DataEmissao;
+                filtro.Salario = model.Salario;
+                filtro.Carteiratrabalho = model.Carteiratrabalho;
+                filtro.CarteiraMotorista = model.CarteiraMotorista;
+                filtro.Rg = model.Rg;
+                filtro.Cpf = model.Cpf;
+                filtro.Endereco = model.Endereco;
+                filtro.Bairro = model.Bairro;
+                filtro.Cidade = model.Cidade;
+                filtro.Ud = model.Ud;
+                filtro.Fone1 = model.Fone1;
+                filtro.Fone2 = model.Fone2;
+                //filtro.//Status = model.Status;
+                filtro.Senha = model.Senha;
+                filtro.Perfil = model.Perfil;
+                filtro.Email = model.Email;
+                filtro.Cargo = model.Cargo;
+                //filtro.//Sexo = model.Sexo;
 
-        //    var model = new UsuarioModels
-        //    {
-        //        IdUsuario = filtro.IdUsuario,
-        //        NomeFuncionario = filtro.NomeFuncionario,
-        //        CodigoFuncionario = filtro.CodigoFuncionario,
-        //        Setor = filtro.Setor,
-        //        DataEmissao = filtro.DataEmissao,
-        //        Salario = filtro.Salario,
-        //        Carteiratrabalho = filtro.Carteiratrabalho,
-        //        CarteiraMotorista = filtro.CarteiraMotorista,
-        //        Rg = filtro.Rg,
-        //        Cpf = filtro.Cpf,
-        //        Endereco = filtro.Endereco,
-        //        Bairro = filtro.Bairro,
-        //        Cidade = filtro.Cidade,
-        //        Ud = filtro.Ud,
-        //        Fone1 = filtro.Fone1,
-        //        Fone2 = filtro.Fone2,
-        //        //Status = filtro.Status,
-        //        Senha = filtro.Senha,
-        //        Perfil = filtro.Perfil,
-        //        Email = filtro.Email,
-        //        //Sexo = filtro.Sexo,
+                if (ModelState.IsValid)
+                {
+                    this.usuarioApp.Atualizar(filtro);
+                    TempData["msgsucesso"] = "Registro atualizado com sucesso!";
 
-        //    };
+                }
 
-        //    //model.DdlOperadora = OperadoraLista();
-        //    //model.DdlTipoPessoa = TipoPessoaLista();
-        //    //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
-        //    //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
-        //    //model.DdlTipoEnderecoLista = TipoEnderecoLista();
-        //    //model.DdlTipoTelefoneLista = TipoTelefoneLista();
 
-        //    return View(model);
-        //}
+                return View(model);
+            }
+            catch (Exception exception)
+            {
+                TempData["msgerror"] = exception.Message.ToString();
+                return View(model);
+            }
+        }
 
-        //public ActionResult Excluir(int id)
-        //{
-        //    try
-        //    {
-        //        this.usuarioApp.Excluir(id);
-        //        TempData["msgsucesso"] = "Registro excluido com sucesso!";
+        public ActionResult Details(int id)
+        {
+            var filtro = this.usuarioApp.ListarPorId(id);
 
-        //        return RedirectToAction("create", "usuario");
+            var model = new UsuarioModels
+            {
+                IdUsuario = filtro.IdUsuario,
+                NomeFuncionario = filtro.NomeFuncionario,
+                CodigoFuncionario = filtro.CodigoFuncionario,
+                Setor = filtro.Setor,
+                DataEmissao = filtro.DataEmissao,
+                Salario = filtro.Salario,
+                Carteiratrabalho = filtro.Carteiratrabalho,
+                CarteiraMotorista = filtro.CarteiraMotorista,
+                Rg = filtro.Rg,
+                Cpf = filtro.Cpf,
+                Endereco = filtro.Endereco,
+                Bairro = filtro.Bairro,
+                Cidade = filtro.Cidade,
+                Ud = filtro.Ud,
+                Fone1 = filtro.Fone1,
+                Fone2 = filtro.Fone2,
+                //Status = filtro.Status,
+                Senha = filtro.Senha,
+                Perfil = filtro.Perfil,
+                Email = filtro.Email,
+                //Sexo = filtro.Sexo,
 
-        //    }
+            };
 
-        //    catch (Exception exception)
-        //    {
-        //        TempData["msgerror"] = exception.Message.ToString();
-        //        return RedirectToAction("index", "usuario");
-        //    }
-        //}
+            //model.DdlOperadora = OperadoraLista();
+            //model.DdlTipoPessoa = TipoPessoaLista();
+            //model.DdlUFLista = UFLista(this._ufApp.ListarTodos());
+            //model.DdlPerfil = PerfilLista(this._perfilApp.ListarTodos());
+            //model.DdlTipoEnderecoLista = TipoEnderecoLista();
+            //model.DdlTipoTelefoneLista = TipoTelefoneLista();
+
+            return View(model);
+        }
+
+        public ActionResult Excluir(int id)
+        {
+            try
+            {
+                this.usuarioApp.Excluir(id);
+                TempData["msgsucesso"] = "Registro excluido com sucesso!";
+
+                return RedirectToAction("create", "usuario");
+
+            }
+
+            catch (Exception exception)
+            {
+                TempData["msgerror"] = exception.Message.ToString();
+                return RedirectToAction("index", "usuario");
+            }
+        }
         public ActionResult Download()
         {
             var dataTable = this.usuarioApp.Relatorio();

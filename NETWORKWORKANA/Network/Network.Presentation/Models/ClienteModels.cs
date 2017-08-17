@@ -41,12 +41,14 @@ namespace Network.Presentation.Models
         public Nullable<bool> Serasa { get; set; }
         public Nullable<bool> TeleCheque { get; set; }
         public Nullable<bool> Bloqueado { get; set; }
-        public Nullable<bool> Classificacao { get; set; }
+        public string Classificacao { get; set; }
         public Nullable<bool> Sexo { get; set; }
         public string TipoRegiao { get; set; }
         public string ProfissaoRamo { get; set; }
         public string VendedorAtendente { get; set; }
         public string Trasportadora { get; set; }
         public string Observacao { get; set; }
+        public string Bairro2 { get; set; }
+        public string Bairro1 { get; set; }
     }
 }

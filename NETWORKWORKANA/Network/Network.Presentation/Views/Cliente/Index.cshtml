@@ -4,6 +4,28 @@
 }
 <h2>@ViewBag.Title</h2>
 
+<style>
+    #example_length {
+        display: none !important;
+    }
+
+    .dataTables_filter {
+        display: none !important;
+    }
+
+    .erro-alert-nome {
+        display: none;
+    }
+
+    .erro-alert {
+        display: block;
+    }
+
+    .dataTables_length {
+        display: none;
+    }
+</style>
+
 <blockquote>
     <p>@ViewBag.Title</p>
     <small>Bem <cite title="Source Title">Vindo!!!</cite></small>
@@ -47,11 +69,16 @@ else if (TempData["msgsuccesso"] != null)
                 <td>@item.Cidade1</td>
                 <td>@item.Contato</td>
                 <td>
-                    <a href="@Url.Action("edit", "cadastro", new { id = item.IdCliente })" data-toggle="tooltip" title="Editar"><img width="20" src="~/Content/img/edit.png" /></a>
-                    <a href="@Url.Action("visualizar", "cadastro", new { id = item.IdCliente })" data-toggle="tooltip" title="Visualizar"><img width="20" src="~/Content/img/view.png" /></a>
+                    <a href="@Url.Action("edit", "cliente", new { id = item.IdCliente })" data-toggle="tooltip" title="Editar"><img width="20" src="~/Content/img/edit.png" /></a>
+                    @*<a href="@Url.Action("visualizar", "cliente", new { id = item.IdCliente })" data-toggle="tooltip" title="Visualizar"><img width="20" src="~/Content/img/view.png" /></a>*@
+                    <a href="@Url.Action("clienteexcluir", "cliente", new { id = item.IdCliente })" data-toggle="tooltip" title="Visualizar"><img width="20" src="~/Content/img/delete.png" /></a>
                 </td>
 
             </tr>
         }
+
+        <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+        <script src="~/Scripts/myscript/myjquery.js"></script>
+
     </tbody>
 </table>

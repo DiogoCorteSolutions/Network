@@ -279,6 +279,7 @@
     <Content Include="Scripts\login\placeholder-shim.min.js" />
     <Content Include="Scripts\mask\jquery-1.2.6.pack.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\myscript\myjquery.js" />
     <Content Include="Scripts\scripts-site\bootstrap.js" />
     <Content Include="Scripts\scripts-site\classie.js" />
     <Content Include="Scripts\scripts-site\jquery-1.10.2.js" />
@@ -302,6 +303,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ComposicaoController.cs" />
     <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -318,6 +320,7 @@
     <Compile Include="InfraStructre\Validation.cs" />
     <Compile Include="Models\BaseModels.cs" />
     <Compile Include="Models\ClienteModels.cs" />
+    <Compile Include="Models\ComposicaoModels.cs" />
     <Compile Include="Models\FornecedorModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\PerfilModels.cs" />
@@ -344,7 +347,15 @@
     <Content Include="Views\Fornecedor\Index.cshtml" />
     <Content Include="Views\Fornecedor\Create.cshtml" />
     <Content Include="Views\Usuario\Editar.cshtml" />
-    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Cliente\ClienteExcluir.cshtml" />
+    <Content Include="Views\Cliente\Edit.cshtml" />
+    <Content Include="Views\Fornecedor\Edit.cshtml" />
+    <Content Include="Views\Fornecedor\Excluir.cshtml" />
+    <Content Include="Views\Usuario\Excluir.cshtml" />
+    <Content Include="Views\Composicao\Index.cshtml" />
+    <Content Include="Views\Composicao\Create.cshtml" />
+    <Content Include="Views\Composicao\Excluir.cshtml" />
+    <Content Include="Views\Composicao\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

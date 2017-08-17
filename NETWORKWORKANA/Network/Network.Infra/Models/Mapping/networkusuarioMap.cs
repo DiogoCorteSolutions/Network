@@ -64,11 +64,11 @@ namespace Network.Infra.Models.Mapping
 
             this.Property(t => t.Email)
                 .HasMaxLength(100);
-           
+
             this.Property(t => t.Cargo)
                 .HasMaxLength(100);
 
-            
+
 
 
 

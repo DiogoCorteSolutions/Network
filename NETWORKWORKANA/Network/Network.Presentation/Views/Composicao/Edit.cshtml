@@ -1,0 +1,139 @@
+﻿@model Network.Presentation.Models.ComposicaoModels
+@{
+    ViewBag.Title = "Editar Composição";
+
+    <style>
+        #example_length {
+            display: none !important;
+        }
+
+        .dataTables_filter {
+            display: none !important;
+        }
+
+        .erro-alert-nome {
+            display: none;
+        }
+
+        .erro-alert {
+            display: block;
+        }
+
+        .dataTables_length {
+            display: none;
+        }
+    </style>
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+@using (Html.BeginForm("Edit", "composicao", FormMethod.Post, new { @class = "form-horizontal", id = "formEdit", name = "formEdit" }))
+{
+
+    <div class="form-horizontal">
+        @if (TempData["msgerror"] != null)
+        {
+            <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgerror"]
+            </div>
+        }
+        else if (TempData["msgsucesso"] != null)
+        {
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgsucesso"]
+            </div>
+        }
+        else if (TempData["msgalerta"] != null)
+        {
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgalerta"]
+            </div>
+        }
+        else if (!ViewContext.ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @Html.ValidationSummary()
+            </div>
+        }
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>CÓDIGO</label>
+                @Html.TextBoxFor(x => x.IdComposicao, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>NOME COMPOSIÇÃO:</label>
+                @Html.TextBoxFor(x => x.NomeComposicao, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>DESCRIÇÃO:</label>
+                @Html.TextBoxFor(x => x.Descricao, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>QUANTIDADE DE COMPOSIÇÃO:</label>
+                @Html.TextBoxFor(x => x.Quantiomposicao, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>DESC TIPO COMPOSIÇÃO:</label>
+                @Html.TextBoxFor(x => x.DescTipoComposicao, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>PESO:</label>
+                @Html.TextBoxFor(x => x.Tamanho, new { @class = "form-control", @placeholder = "", @onchange = "mascaraInteiro(formCadastro.Salario);", @maxlength = "9" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>PESO:</label>
+                @Html.TextBoxFor(x => x.Peso, new { @class = "form-control", placeholder = "", required = "required" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>VALOR A SER COBRADO DO PRODUTOR:</label>
+                @Html.TextBoxFor(x => x.ValorASerCobradoProdutor, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>VALOR A SER PAGO AO PRODUTOR:</label>
+                @Html.TextBoxFor(x => x.ValorASerPagoProdutor, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
+            </div>
+        </div>
+        <div id="alerta-div" style="display: none;"></div>
+        <hr />
+
+        <div class="col-md-12">
+            <div class="form-group m-t-10">
+                <button id="btn-all-valid" name="btn-all-valid" type="submit" class="btn btn-success btn-custom waves-effect w-md m-b-5"><i class="fa fa-save"></i>&ensp;Salvar</button>
+                <a id="btn-all" name="btn-all" href="@Url.Action("index", "composicao")" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
+
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+
+
+
+
+
+

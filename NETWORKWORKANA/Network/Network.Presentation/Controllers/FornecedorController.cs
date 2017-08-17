@@ -128,5 +128,110 @@ namespace Network.Presentation.Controllers
                 return View(model);
             }
         }
+
+        public ActionResult Edit(int id)
+        {
+            var filtro = this.fornecedorApp.ListarPorId(id);
+
+            var model = new FornecedorModels
+            {
+                IdFornecedor = filtro.IdFornecedor,
+                RazaoSocial = filtro.RazaoSocial,
+                NomeFantasia = filtro.NomeFantasia,
+                Telefone1 = filtro.Telefone1,
+                Telefone2 = filtro.Telefone2,
+                CnpjCpf = filtro.CnpjCpf,
+                Cpf = filtro.Cpf,
+                Cnpj = filtro.Cnpj,
+                IncricaoEstadual = filtro.IncricaoEstadual,
+                Endereco = filtro.Endereco,
+                Bairro = filtro.Bairro,
+                LinhaProdutos = filtro.LinhaProdutos,
+                Cidade = filtro.Cidade,
+                Uf = filtro.Uf,
+                Cep = filtro.Cep,
+                SiteUrl = filtro.SiteUrl,
+                Banco = filtro.Banco,
+                Agencia = filtro.Agencia,
+                Conta = filtro.Conta,
+                TrasportadoraUltilizada = filtro.TrasportadoraUltilizada,
+                Codigo = filtro.Codigo,
+                Observacao = filtro.Observacao,
+                Contato = filtro.Contato,
+                Email = filtro.Email,
+                Fax = filtro.Fax,
+
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(FornecedorModels model)
+        {
+            try
+            {
+                var filtro = this.fornecedorApp.ListarPorId(model.IdFornecedor);
+
+                filtro.IdFornecedor = model.IdFornecedor;
+                filtro.RazaoSocial = model.RazaoSocial;
+                filtro.NomeFantasia = model.NomeFantasia;
+                filtro.Telefone1 = model.Telefone1;
+                filtro.Telefone2 = model.Telefone2;
+                filtro.CnpjCpf = model.CnpjCpf;
+                filtro.Cpf = model.Cpf;
+                filtro.Cnpj = model.Cnpj;
+                filtro.IncricaoEstadual = model.IncricaoEstadual;
+                filtro.Endereco = model.Endereco;
+                filtro.Bairro = model.Bairro;
+                filtro.LinhaProdutos = model.LinhaProdutos;
+                filtro.Cidade = model.Cidade;
+                filtro.Uf = model.Uf;
+                filtro.Cep = model.Cep;
+                filtro.SiteUrl = model.SiteUrl;
+                filtro.Banco = model.Banco;
+                filtro.Agencia = model.Agencia;
+                filtro.Conta = model.Conta;
+                filtro.TrasportadoraUltilizada = model.TrasportadoraUltilizada;
+                filtro.Codigo = model.Codigo;
+                filtro.Observacao = model.Observacao;
+                filtro.Contato = model.Contato;
+                filtro.Email = model.Email;
+                filtro.Fax = model.Fax;
+
+
+                if (ModelState.IsValid)
+                {
+                    this.fornecedorApp.Atualizar(filtro);
+
+                    TempData["msgsucesso"] = "Registro atualizado com sucesso";
+                }
+
+                return View(model);
+            }
+            catch (Exception exception)
+            {
+                TempData["msgerror"] = exception.Message.ToString();
+
+                return View(model);
+            }
+        }
+
+        public ActionResult Excluir(int id)
+        {
+            try
+            {
+                this.fornecedorApp.Excluir(id);
+                TempData["msgsucesso"] = "Registro excluido com sucesso!";
+
+                return RedirectToAction("create", "fornecedor");
+
+            }
+
+            catch (Exception exception)
+            {
+                TempData["msgerror"] = exception.Message.ToString();
+                return RedirectToAction("create", "fornecedor");
+            }
+        }
     }
 }

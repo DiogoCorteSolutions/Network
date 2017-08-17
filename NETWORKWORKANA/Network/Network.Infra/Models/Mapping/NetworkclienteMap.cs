@@ -99,6 +99,15 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Trasportadora)
                 .HasMaxLength(200);
 
+            this.Property(t => t.Bairro1)
+              .HasMaxLength(100);
+
+            this.Property(t => t.Bairro2)
+              .HasMaxLength(100);
+
+            this.Property(t => t.Classificacao)
+            .HasMaxLength(100);
+
             // Table & Column Mappings
             this.ToTable("Networkcliente");
             this.Property(t => t.IdCliente).HasColumnName("IdCliente");
@@ -142,6 +151,8 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.VendedorAtendente).HasColumnName("VendedorAtendente");
             this.Property(t => t.Trasportadora).HasColumnName("Trasportadora");
             this.Property(t => t.Observacao).HasColumnName("Observacao");
+            this.Property(t => t.Bairro1).HasColumnName("Bairro1");
+            this.Property(t => t.Bairro2).HasColumnName("Bairro2");
         }
     }
 }

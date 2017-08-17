@@ -1,0 +1,188 @@
+﻿@model Network.Presentation.Models.UsuarioModels
+@{
+    ViewBag.Title = "Usúario Cliente";
+
+    <style>
+        #example_length {
+            display: none !important;
+        }
+
+        .dataTables_filter {
+            display: none !important;
+        }
+
+        .erro-alert-nome {
+            display: none;
+        }
+
+        .erro-alert {
+            display: block;
+        }
+
+        .dataTables_length {
+            display: none;
+        }
+    </style>
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+@using (Html.BeginForm("editar", "usuario", FormMethod.Post, new { @class = "form-horizontal", id = "formEdit", name = "formEdit" }))
+{
+
+    <div class="form-horizontal">
+        @if (TempData["msgerror"] != null)
+        {
+            <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgerror"]
+            </div>
+        }
+        else if (TempData["msgsucesso"] != null)
+        {
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgsucesso"]
+            </div>
+        }
+        else if (TempData["msgalerta"] != null)
+        {
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["msgalerta"]
+            </div>
+        }
+        else if (!ViewContext.ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @Html.ValidationSummary()
+            </div>
+        }
+
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CÓDIGO</label>
+                @Html.TextBoxFor(x => x.IdUsuario, new { @class = "form-control" })
+            </div>
+        </div>
+        @*, @disabled = "disabled" })*@
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>NOME DO FUNCIONARIO:</label>
+                @Html.TextBoxFor(x => x.NomeFuncionario, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CÓDIGO:</label>
+                @Html.TextBoxFor(x => x.IdUsuario, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>FUNÇÃO:</label>
+                @Html.TextBoxFor(x => x.Cargo, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>DEPARTAMENTO:</label>
+                @Html.TextBoxFor(x => x.Setor, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>DATA ADMISÃO:</label>
+                @Html.TextBoxFor(x => x.DataEmissao, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>SÁLARIO:</label>
+                @Html.TextBoxFor(x => x.Salario, new { @class = "form-control", @placeholder = "", @onchange = "mascaraInteiro(formCadastro.Salario);", @maxlength = "9" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CARTEIRA DE TRABALHO:</label>
+                @Html.TextBoxFor(x => x.Carteiratrabalho, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CARTEIRA DE MOTORISTA:</label>
+                @Html.TextBoxFor(x => x.CarteiraMotorista, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>R.G.:</label>
+                @Html.TextBoxFor(x => x.Rg, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CPF:</label>
+                @Html.TextBoxFor(x => x.Cpf, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCPF(formCadastro.Cpf);", @maxlength = "11" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>ENDEREÇO:</label>
+                @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>BAIRRO:</label>
+                @Html.TextBoxFor(x => x.Bairro, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>CIDADE:</label>
+                @Html.TextBoxFor(x => x.Cidade, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>UF:</label>
+                @Html.TextBoxFor(x => x.Ud, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>FONE 1:</label>
+                @Html.TextBoxFor(x => x.Fone1, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>FONE 2:</label>
+                @Html.TextBoxFor(x => x.Fone2, new { @class = "form-control" })
+            </div>
+        </div>
+        <div id="alerta-div" style="display: none;"></div>
+        <hr />
+
+        <div class="col-md-12">
+            <div class="form-group m-t-10">
+                <button id="btn-all-valid" name="btn-all-valid" type="submit" class="btn btn-success btn-custom waves-effect w-md m-b-5"><i class="fa fa-save"></i>&ensp;Salvar</button>
+                <a id="btn-all" name="btn-all" href="@Url.Action("index", "usuario")" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
+
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+
+
+
+
+
+
