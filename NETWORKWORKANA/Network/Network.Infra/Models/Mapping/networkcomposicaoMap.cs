@@ -30,6 +30,9 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Peso)
                 .HasMaxLength(100);
 
+            this.Property(t => t.Status)
+                .HasMaxLength(100);
+
             // Table & Column Mappings
             this.ToTable("networkcomposicao");
             this.Property(t => t.IdComposicao).HasColumnName("IdComposicao");

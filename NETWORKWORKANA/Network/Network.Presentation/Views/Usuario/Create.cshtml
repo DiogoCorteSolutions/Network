@@ -64,7 +64,7 @@
         </div>
     }
 
-    <div class="col-md-2">
+    <div class="col-md-2", id="nomeFunc">
         <div class="form-group">
             <label>NOME FUNCIONARIO:</label>
             @Html.TextBoxFor(x => x.NomeFuncionario, new { @class = "form-control", placeholder = "", required = "required" })
@@ -191,9 +191,15 @@
 
         </div>
     </div>
+    
+    <button class="undo">UNDO</button>
 
 
-    <script src="@Url.Content(" ~ />Scripts/views/commonViews.js")"></script>
+
+
+    <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+    <script src="~/Scripts/myscript/myjquery.js"></script>
+
 
 }
 

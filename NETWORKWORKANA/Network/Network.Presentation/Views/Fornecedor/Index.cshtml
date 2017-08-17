@@ -55,3 +55,12 @@ else if (TempData["msgsuccesso"] != null)
         }
     </tbody>
 </table>
+<div class="form-group">
+    <div class="col-lg-8 col-lg-offset-0">
+        <form method="get" action="@Url.Action("Create", "fornecedor")">
+            <button type="submit" class="btn btn-success">Buscar</button>
+            <a href="@Url.Action("index", "home")" class="btn btn-warning">Voltar</a>
+        </form>
+    </div>
+</div>
+

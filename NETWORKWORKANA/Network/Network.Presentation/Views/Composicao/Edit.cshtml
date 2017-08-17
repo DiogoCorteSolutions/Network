@@ -115,6 +115,12 @@
                 @Html.TextBoxFor(x => x.ValorASerPagoProdutor, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
             </div>
         </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>STATUS:</label>
+                @Html.DropDownListFor(x => x.Status, Model.DdSexo, new { @class = "form-control", @required = "required", @placeholder = "Selecione" })
+            </div>
+        </div>
         <div id="alerta-div" style="display: none;"></div>
         <hr />
 

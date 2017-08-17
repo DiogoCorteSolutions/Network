@@ -1,7 +1,23 @@
 ﻿var aposinicializar = function () {
     var nome = $("#nome");
-    console.log(nome);
+    alert(nome);
 
 };
 
-$(aposinicializar);
+var teste = function () {
+    alert("Teste");
+};
+
+
+
+var undo = function()
+{
+    var nome = $(this("#nomeFunc").val);
+
+}
+
+$(".undo").val();
+
+
+//$(teste)
+//$(aposinicializar);
