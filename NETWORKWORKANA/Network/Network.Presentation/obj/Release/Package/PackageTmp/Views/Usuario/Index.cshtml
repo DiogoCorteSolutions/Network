@@ -47,7 +47,7 @@ else if (TempData["msgsuccesso"] != null)
                 <td>@item.Cidade</td>
                 <td>@item.Fone1</td>
                 <td>
-                    <a href="@Url.Action("edit", "usuario", new { id = item.IdUsuario })" data-toggle="tooltip" title="Editar"><img width="20" src="~/Content/img/edit.png" /></a>
+                    <a href="@Url.Action("editar", "usuario", new { id = item.IdUsuario })" data-toggle="tooltip" title="Editar"><img width="20" src="~/Content/img/edit.png" /></a>
                     <a href="@Url.Action("visualizar", "usuario", new { id = item.IdUsuario })" data-toggle="tooltip" title="Visualizar"><img width="20" src="~/Content/img/view.png" /></a>
                 </td>
 
@@ -55,3 +55,12 @@ else if (TempData["msgsuccesso"] != null)
         }
     </tbody>
 </table>
+<div class="form-group">
+    <div class="col-lg-8 col-lg-offset-0">
+        <form method="get" action="@Url.Action("Create", "usuario")">
+            <button type="submit" class="btn btn-success">Buscar</button>
+            <a href="@Url.Action("index", "home")" class="btn btn-warning">Voltar</a>
+        </form>
+    </div>
+</div>
+

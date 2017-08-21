@@ -130,7 +130,7 @@ namespace Network.Presentation.Controllers
                 filtro.Descricao = model.Descricao;
                 filtro.NomeComposicao = model.NomeComposicao;
                 filtro.Classificacao = model.Classificacao;
-                //filtro.Status = item.Status,
+                filtro.Status = model.Status;
                 filtro.Quantiomposicao = model.Quantiomposicao;
                 filtro.DescTipoComposicao = model.DescTipoComposicao;
                 filtro.Tamanho = model.Tamanho;

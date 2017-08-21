@@ -10,13 +10,24 @@ var teste = function () {
 
 
 
-var undo = function()
-{
+var undo = function () {
     var nome = $(this("#nomeFunc").val);
 
 }
 
 $(".undo").val();
+
+
+
+
+var vendaMensal = $("#vendaMediaMensal").val();
+
+$("#vendaMediaMensal").focusout(function () {
+    console.log(vendaMensal);
+});
+
+$(vendaMensal);
+
 
 
 //$(teste)
