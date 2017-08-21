@@ -30,6 +30,7 @@ namespace Network.Infra.Contex
         public DbSet<networkperfil> networkperfils { get; set; }
         public DbSet<networkproduto> networkprodutos { get; set; }
         public DbSet<networkusuario> networkusuarios { get; set; }
+        public DbSet<networktipo> networktipos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,6 +42,7 @@ namespace Network.Infra.Contex
             modelBuilder.Configurations.Add(new networkperfilMap());
             modelBuilder.Configurations.Add(new networkprodutoMap());
             modelBuilder.Configurations.Add(new networkusuarioMap());
+            modelBuilder.Configurations.Add(new networktipoMap());
         }
     }
 }

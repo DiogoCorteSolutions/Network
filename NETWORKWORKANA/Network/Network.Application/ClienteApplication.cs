@@ -45,5 +45,22 @@ namespace Network.Application
         {
             return this.clienteRepository.Existe(cpf);
         }
+        public IEnumerable<networktipo> ListarTodosTiposCliente()
+        {
+            return this.clienteRepository.ListarTodosTiposCliente();
+        }
+        public void ExcluirTipoCliente(int id)
+        {
+            this.clienteRepository.ExcluirTipoCliente(id);
+        }
+        public void AtualizarCliente(networktipo dto)
+        {
+            this.clienteRepository.AtualizarTipoCliente(dto);
+
+        }
+        public void SalvarTipoCliente(networktipo dto)
+        {
+            this.clienteRepository.SalvarTipoCliente(dto);
+        }
     }
 }

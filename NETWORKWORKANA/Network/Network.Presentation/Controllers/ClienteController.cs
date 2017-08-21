@@ -389,5 +389,70 @@ namespace Network.Presentation.Controllers
             }
         }
 
+        public ActionResult TipoCliente()
+        {
+            var model = new List<TipoModels>();
+
+            foreach (var item in this.appCliente.ListarTodosTiposCliente())
+            {
+                var objeto = new TipoModels
+                {
+                    IdTipo = item.IdTipo,
+                    Nome = item.Nome,
+                    Descricao = item.Descricao,
+                    DescTipo = item.DescTipo,
+                };
+                model.Add(objeto);
+
+            }
+            return View(model);
+        }
+
+        public ActionResult NovoTipoCliente()
+        {
+            var moel = new TipoModels();
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NovoTipoCliente(TipoModels model)
+        {
+
+
+            try
+            {
+
+                var dto = new networktipo
+                {
+                   IdTipo = model.IdTipo,
+                   Nome = model.Nome,
+                   Descricao = model.Descricao,
+                   DescTipo = model.DescTipo,
+                };
+
+
+                if (ModelState.IsValid)
+                {
+                    this.appCliente.SalvarTipo(dto);
+                    TempData["msgsucesso"] = "Registro salvo com sucesso";
+                }
+
+                //model.Nome = string.Empty;
+                //model.Descricao = string.Empty;
+                //model.ISBN = string.Empty;
+                //model.Autor = string.Empty;
+                //model.Editora = string.Empty;
+                //model.Ativo = false;
+                //model.Quantidade = 0;
+
+                return RedirectToAction("NovoTipoCliente");
+            }
+            catch (Exception execption)
+            {
+                TempData["msgerror"] = execption.Message.ToString();
+
+                return View(model);
+            }
+        }
     }
 }

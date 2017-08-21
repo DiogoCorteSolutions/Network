@@ -42,5 +42,22 @@ namespace Network.Application
             this.repositorio.Salvar(dto);
 
         }
+        public IEnumerable<networktipo> ListarTodosTiposFornecedores()
+        {
+            return this.repositorio.ListarTodosTiposFornecedor();
+        }
+        public void ExcluirTipoFornecedor(int id)
+        {
+            this.repositorio.ExcluirTipoFornecedor(id);
+        }
+        public void AtualizarFornecedor(networktipo dto)
+        {
+            this.repositorio.AtualizarTipoFornecedor(dto);
+
+        }
+        public void SalvarTipoFornecedor(networktipo dto)
+        {
+            this.repositorio.SalvarTipoFornecedor(dto);
+        }
     }
 }

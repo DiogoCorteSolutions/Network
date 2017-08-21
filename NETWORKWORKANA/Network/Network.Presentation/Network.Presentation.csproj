@@ -331,6 +331,7 @@
     <Compile Include="Models\FornecedorModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\PerfilModels.cs" />
+    <Compile Include="Models\TipoModels.cs" />
     <Compile Include="Models\UsuarioModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

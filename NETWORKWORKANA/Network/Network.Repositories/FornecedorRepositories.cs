@@ -47,5 +47,29 @@ namespace Network.Repositories
             this.context.SaveChanges();
 
         }
+        public IEnumerable<networktipo> ListarTodosTiposFornecedor()
+        {
+            return this.context.networktipos;
+        }
+        public void ExcluirTipoFornecedor(int id)
+        {
+            var filtro = this.context.networktipos.Find(id);
+            this.context.Entry(filtro).State = System.Data.Entity.EntityState.Deleted;
+            this.context.SaveChanges();
+        }
+        public void AtualizarTipoFornecedor(networktipo dto)
+        {
+
+            this.context.Entry(dto).State = System.Data.Entity.EntityState.Modified;
+            this.context.SaveChanges();
+
+        }
+        public void SalvarTipoFornecedor(networktipo dto)
+        {
+            this.context.networktipos.Add(dto);
+
+            this.context.SaveChanges();
+
+        }
     }
 }

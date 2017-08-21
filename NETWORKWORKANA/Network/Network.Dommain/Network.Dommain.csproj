@@ -53,6 +53,7 @@
     <Compile Include="networkfornecedore.cs" />
     <Compile Include="networkperfil.cs" />
     <Compile Include="networkproduto.cs" />
+    <Compile Include="networktipo.cs" />
     <Compile Include="networkusuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
