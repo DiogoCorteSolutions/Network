@@ -50,6 +50,7 @@
     <Compile Include="ComposicaoApplication.cs" />
     <Compile Include="FornecedorApplication.cs" />
     <Compile Include="PerfilApplication.cs" />
+    <Compile Include="ProdutoApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioApplication.cs" />
   </ItemGroup>

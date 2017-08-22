@@ -9,7 +9,7 @@ namespace Network.Dommain
         public string Descricao { get; set; }
         public string NomeComposicao { get; set; }
         public string Classificacao { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public string Status { get; set; }
         public Nullable<int> Quantiomposicao { get; set; }
         public string DescTipoComposicao { get; set; }
         public string Tamanho { get; set; }

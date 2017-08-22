@@ -21,7 +21,7 @@ namespace Network.Presentation.Controllers
         {
             var model = new List<ComposicaoModels>();
 
-            foreach (var item in this.appComposicao.ListarTodos())
+            foreach (var item in this.appComposicao.ListarTodos().ToList().Where(x => x.Status == "CADASTRADO"))
             {
                 var objeto = new ComposicaoModels
                 {
@@ -29,7 +29,7 @@ namespace Network.Presentation.Controllers
                     Descricao = item.Descricao,
                     NomeComposicao = item.NomeComposicao,
                     Classificacao = item.Classificacao,
-                    //Status = item.Status,
+                    Status = item.Status,
                     Quantiomposicao = item.Quantiomposicao,
                     DescTipoComposicao = item.DescTipoComposicao,
                     Tamanho = item.Tamanho,
@@ -58,9 +58,9 @@ namespace Network.Presentation.Controllers
                     IdComposicao = model.IdComposicao,
                     Descricao = model.Descricao,
                     NomeComposicao = model.NomeComposicao,
-                    Classificacao = model.Classificacao,
-                    //Status = item.Status,
-                    Quantiomposicao = model.Quantiomposicao,
+                    //Classificacao = model.Classificacao,
+                    Status = "CADASTRADO",
+                    //Quantiomposicao = model.Quantiomposicao,
                     DescTipoComposicao = model.DescTipoComposicao,
                     Tamanho = model.Tamanho,
                     Peso = model.Peso,
@@ -91,6 +91,10 @@ namespace Network.Presentation.Controllers
         {
             var filtro = this.appComposicao.ListarPorId(id);
 
+
+
+
+
             var model = new ComposicaoModels
             {
                 IdComposicao = filtro.IdComposicao,
@@ -106,11 +110,17 @@ namespace Network.Presentation.Controllers
                 ValorASerCobradoProdutor = filtro.ValorASerCobradoProdutor,
             };
 
+            model.DdSexo = SexoLista();
+
+
             return View(model);
         }
         [HttpPost]
         public ActionResult Edit(ComposicaoModels model)
         {
+
+            model.DdSexo = SexoLista();
+
             try
             {
                 var filtro = this.appComposicao.ListarPorId(model.IdComposicao);
@@ -120,7 +130,7 @@ namespace Network.Presentation.Controllers
                 filtro.Descricao = model.Descricao;
                 filtro.NomeComposicao = model.NomeComposicao;
                 filtro.Classificacao = model.Classificacao;
-                //filtro.Status = item.Status,
+                filtro.Status = model.Status;
                 filtro.Quantiomposicao = model.Quantiomposicao;
                 filtro.DescTipoComposicao = model.DescTipoComposicao;
                 filtro.Tamanho = model.Tamanho;
@@ -164,5 +174,17 @@ namespace Network.Presentation.Controllers
                 return RedirectToAction("create", "composicao");
             }
         }
+
+        protected IEnumerable<SelectListItem> SexoLista()
+        {
+            var retorno = new List<SelectListItem>();
+
+            retorno.Add(new SelectListItem { Selected = true, Text = "Selecione", Value = "" });
+            retorno.Add(new SelectListItem { Text = "CADASTRADO", Value = "CADASTRADO" });
+            retorno.Add(new SelectListItem { Text = "VENDIDO", Value = "VENDIDO" });
+
+            return retorno;
+        }
+
     }
 }

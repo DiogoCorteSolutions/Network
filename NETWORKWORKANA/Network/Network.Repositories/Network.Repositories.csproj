@@ -50,6 +50,7 @@
     <Compile Include="ComposicaoRepositories.cs" />
     <Compile Include="FornecedorRepositories.cs" />
     <Compile Include="PerfilRepositories.cs" />
+    <Compile Include="ProdutoRepositories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioRepositories.cs" />
   </ItemGroup>

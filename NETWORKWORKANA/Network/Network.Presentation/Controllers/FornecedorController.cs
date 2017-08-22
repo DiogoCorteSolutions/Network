@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace Network.Presentation.Controllers
 {
-    public class FornecedorController : Controller
+    public class FornecedorController : BaseController
     {
 
         private readonly Network.Application.FornecedorApplication fornecedorApp;
@@ -69,11 +69,8 @@ namespace Network.Presentation.Controllers
         [HttpPost]
         public ActionResult Create(FornecedorModels model)
         {
-
-
             try
             {
-
                 var dto = new networkfornecedore
                 {
                     IdFornecedor = model.IdFornecedor,
