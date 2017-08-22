@@ -314,6 +314,7 @@
     <Compile Include="Controllers\FornecedorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="custom\ValidationCPF.cs" />
     <Compile Include="Global.asax.cs">
@@ -331,7 +332,15 @@
     <Compile Include="Models\FornecedorModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\PerfilModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\TipoModels.cs" />
+=======
+<<<<<<< HEAD
+    <Compile Include="Models\ProdutoModels.cs" />
+=======
+    <Compile Include="Models\TipoModels.cs" />
+>>>>>>> b2812ae805467fb9ac8ae875985783e0eb252ce9
+>>>>>>> ab05a823896308909e0c445eac389d4e42f9ccbf
     <Compile Include="Models\UsuarioModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -374,6 +383,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Produto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CrossCounting\CrossCounting.csproj">

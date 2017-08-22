@@ -64,7 +64,7 @@
         </div>
     }
 
-    <div class="col-md-4">
+    <div class="col-md-4" id="CPF">
         <div class="form-group">
             <label>NOME COMPOSIÇÃO:</label>
             @Html.TextBoxFor(x => x.NomeComposicao, new { @class = "form-control", placeholder = "", required = "required" })
@@ -121,11 +121,32 @@
             <a id="btn-all" name="btn-all" href="@Url.Action("index", "composicao")" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
 
         </div>
+<<<<<<< HEAD
     
     </div>
 
 <script src="~/Scripts/jquery-2.1.3.min.js"></script>
     <script src="~/Scripts/views/commonViews.js"></script>
+=======
+<<<<<<< HEAD
+
+        @section Scripts{
+            <script src="@Url.Content("~/Scripts/views/commonViews.js")"></script>
+            <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+            <script src="~/Scripts/myscript/myjquery.js"></script>
+        }
+
+    </div>
+
+
+=======
+    
+    </div>
+
+<script src="~/Scripts/jquery-2.1.3.min.js"></script>
+    <script src="~/Scripts/views/commonViews.js"></script>
+>>>>>>> b2812ae805467fb9ac8ae875985783e0eb252ce9
+>>>>>>> ab05a823896308909e0c445eac389d4e42f9ccbf
 }
 
 

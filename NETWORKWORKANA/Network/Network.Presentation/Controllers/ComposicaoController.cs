@@ -175,7 +175,14 @@ namespace Network.Presentation.Controllers
             }
         }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2812ae805467fb9ac8ae875985783e0eb252ce9
+>>>>>>> ab05a823896308909e0c445eac389d4e42f9ccbf
         protected IEnumerable<SelectListItem> SexoLista()
         {
             var retorno = new List<SelectListItem>();
@@ -186,5 +193,12 @@ namespace Network.Presentation.Controllers
 
             return retorno;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> b2812ae805467fb9ac8ae875985783e0eb252ce9
+>>>>>>> ab05a823896308909e0c445eac389d4e42f9ccbf
     }
 }

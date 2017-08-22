@@ -30,6 +30,12 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Peso)
                 .HasMaxLength(100);
 
+            this.Property(t => t.Forncedor)
+                .HasMaxLength(100);
+
+            this.Property(t => t.CnpjFornecedor)
+                .HasMaxLength(100);
+
             // Table & Column Mappings
             this.ToTable("networkprodutos");
             this.Property(t => t.IdProduto).HasColumnName("IdProduto");
@@ -39,7 +45,9 @@ namespace Network.Infra.Models.Mapping
             this.Property(t => t.Status).HasColumnName("Status");
             this.Property(t => t.Quantidade).HasColumnName("Quantidade");
             this.Property(t => t.TipoProduto).HasColumnName("TipoProduto");
-            this.Property(t => t.DescTipoProduto).HasColumnName("DescTipoProduto");
+            this.Property(t => t.CnpjFornecedor).HasColumnName("DescTipoProduto");
+            this.Property(t => t.CnpjFornecedor).HasColumnName("CnpjFornecedor");
+            this.Property(t => t.Forncedor).HasColumnName("Forncedor");
             this.Property(t => t.Tamanho).HasColumnName("Tamanho");
             this.Property(t => t.Peso).HasColumnName("Peso");
             this.Property(t => t.ValorASerPagoProdutor).HasColumnName("ValorASerPagoProdutor");

@@ -15,6 +15,8 @@ namespace Network.Dommain
         public string DescTipoProduto { get; set; }
         public string Tamanho { get; set; }
         public string Peso { get; set; }
+        public string Forncedor  { get; set; }
+        public string CnpjFornecedor { get; set; }
         public Nullable<decimal> ValorASerPagoProdutor { get; set; }
         public Nullable<decimal> ValorASerCobradoProdutor { get; set; }
     }
