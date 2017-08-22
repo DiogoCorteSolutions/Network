@@ -291,7 +291,13 @@
     <Content Include="Scripts\scripts-site\stickUp.min.js" />
     <Content Include="Scripts\scripts-site\uiMorphingButton_inflow.js" />
     <Content Include="Scripts\scripts-site\wow.min.js" />
+    <Content Include="Scripts\views\ajudaViews.js" />
+    <Content Include="Scripts\views\clienteViews.js" />
     <Content Include="Scripts\views\common.js" />
+    <Content Include="Scripts\views\commonViews.js" />
+    <Content Include="Scripts\views\configuracaoViews.js" />
+    <Content Include="Scripts\views\cupomViews.js" />
+    <Content Include="Scripts\views\favicon.ico" />
     <Content Include="Scripts\views\locacao.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Login\Index.cshtml" />

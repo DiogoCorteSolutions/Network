@@ -1,6 +1,6 @@
 ﻿var aposinicializar = function () {
-    var nome = $("#nome");
-    console.log(nome);
+    var nome = $("#CPF").val();
+    alert(nome);
 
 };
 

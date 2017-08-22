@@ -30,3 +30,13 @@ function onInfo(eval) {
 function onClose() {
     $('#alerta-div').css('display', 'none');
 }
+
+function getHost(value) {
+    var host = window.location.hostname;
+
+    if (host != 'localhost') {
+        return '/portalsoshml' + value;
+    } else {
+        return value;
+    }
+}
