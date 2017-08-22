@@ -1,0 +1,17 @@
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\CrossCounting.dll.config
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\CrossCounting.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\CrossCounting.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\Correios.Net.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EntityFramework.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EntityFramework.SqlServer.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EPPlus.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\Newtonsoft.Json.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\Correios.Net.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EntityFramework.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EntityFramework.SqlServer.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\EPPlus.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\Newtonsoft.Json.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\bin\Release\Newtonsoft.Json.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\obj\Release\CrossCounting.csprojResolveAssemblyReference.cache
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\obj\Release\CrossCounting.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\CrossCounting\obj\Release\CrossCounting.pdb

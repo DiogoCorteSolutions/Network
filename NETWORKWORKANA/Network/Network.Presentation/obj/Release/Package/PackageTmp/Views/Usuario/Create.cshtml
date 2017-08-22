@@ -64,51 +64,57 @@
         </div>
     }
 
-    <div class="col-md-2">
+    <div class="col-md-2", id="nomeFunc">
         <div class="form-group">
-            <label>Nome</label>
+            <label>NOME FUNCIONARIO:</label>
             @Html.TextBoxFor(x => x.NomeFuncionario, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Código</label>
+            <label>CÓDIGO:</label>
             @Html.TextBoxFor(x => x.CodigoFuncionario, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Setor</label>
+            <label>FUNÇÃO:</label>
+            @Html.TextBoxFor(x => x.Cargo, new { @class = "form-control", placeholder = "", required = "required" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>DEPARTAMENTO:</label>
             @Html.TextBoxFor(x => x.Setor, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Data de Emissão</label>
-            @Html.TextBoxFor(x => x.DataEmaissao, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataNascimento);", @maxlength = "8" })
+            <label>DATA ADMIISSÃO:</label>
+            @Html.TextBoxFor(x => x.DataEmissao, new { @class = "form-control", @placeholder = "", @onchange = "MascaraData(formCadastro.DataEmissao);", @maxlength = "8" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Salario</label>
-            @Html.TextBoxFor(x => x.Salario, new { @class = "form-control", @placeholder = "", @onchange = "MascaraTelefone(formCadastro.Telefone2);", @maxlength = "11" })
+            <label>SALÁRIO:</label>
+            @Html.TextBoxFor(x => x.Salario, new { @class = "form-control", @placeholder = "", @onchange = "mascaraInteiro(formCadastro.Salario);", @maxlength = "9" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Carteira de trabalho</label>
+            <label>CARTEIRA DE TRABALHO:</label>
             @Html.TextBoxFor(x => x.Carteiratrabalho, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Carteira de Motorista</label>
-            @Html.TextBoxFor(x => x.CarteiraMotorista, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCNPJ(formCadastro.Cnpj);", @maxlength = "14" })
+            <label>CARTEIRA DE MOTORISTA:</label>
+            @Html.TextBoxFor(x => x.CarteiraMotorista, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>RG</label>
+            <label>R.G.:</label>
             @Html.TextBoxFor(x => x.Rg, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCPF(formCadastro.Cpf);", @maxlength = "11" })
         </div>
     </div>
@@ -116,76 +122,64 @@
 
     <div class="col-md-2">
         <div class="form-group">
-            <label>CPF</label>
+            <label>CPF:</label>
             @Html.TextBoxFor(x => x.Cpf, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCPF(formCadastro.Cpf);", @maxlength = "11" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Endereco</label>
+            <label>ENDEREÇO:</label>
             @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
     <div class="col-md-2">
         <div class="form-group">
-            <label>Bairro</label>
+            <label>BAIRRO:</label>
             @Html.TextBoxFor(x => x.Bairro, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Cidade</label>
+            <label>CIDADE:</label>
             @Html.TextBoxFor(x => x.Cidade, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>UF</label>
+            <label>UF:</label>
             @Html.TextBoxFor(x => x.Ud, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Telefone Referencia</label>
-            @Html.TextBoxFor(x => x.Fone1, new { @class = "form-control", placeholder = "", required = "required" })
+            <label>FONE 1:</label>
+            @Html.TextBoxFor(x => x.Fone1, new { @class = "form-control", @placeholder = "", @onchange = "MascaraTelefone(formCadastro.Fone1);", @maxlength = "11" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="form-group">
-            <label>Telefone Referencia</label>
-            @Html.TextBoxFor(x => x.Fone2, new { @class = "form-control", placeholder = "", required = "required" })
+            <label>FONE 2:</label>
+            @Html.TextBoxFor(x => x.Fone2, new { @class = "form-control", @placeholder = "", @onchange = "MascaraTelefone(formCadastro.Fone2);", @maxlength = "11" })
         </div>
     </div>
-    @*<div class="col-md-2">
-            <div class="form-group">
-                <label>Status </label>
-                @Html.TextBoxFor(x => x.Status, new { @class = "form-control", @placeholder = "", @onchange = "MascaraCep(formCadastro.Cep1);", @maxlength = "8" })
-            </div>
-        </div>*@
-    <div class="col-md-2">
+    <div class="col-md-4">
         <div class="form-group">
-            <label>Senha</label>
+            <label>SENHA:</label>
             @Html.TextBoxFor(x => x.Senha, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-4">
         <div class="form-group">
-            <label>Perfil</label>
+            <label>PERFIL:</label>
             @Html.TextBoxFor(x => x.Perfil, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-4">
         <div class="form-group">
-            <label>Email</label>
+            <label>E-MAIL:</label>
             @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "", required = "required" })
         </div>
     </div>
-    @*<div class="col-md-2">
-            <div class="form-group">
-                <label>Sexo</label>
-                @Html.TextBoxFor(x => x.Sexo, new { @class = "form-control", placeholder = "", required = "required" })
-            </div>
-        </div>*@
     <div id="alerta-div" style="display: none;"></div>
 
     <hr />
@@ -193,13 +187,19 @@
     <div class="col-md-12">
         <div class="form-group m-t-10">
             <button id="btn-all-valid" name="btn-all-valid" type="submit" class="btn btn-success btn-custom waves-effect w-md m-b-5"><i class="fa fa-save"></i>&ensp;Salvar</button>
-            <a id="btn-all" name="btn-all" href="@Url.Action("index", "usuario")" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
+            <a id="btn-all" name="btn-all" href="@Url.Action(" index", "usuario" )" class="btn btn-warning btn-custom waves-effect w-md m-b-5"><i class="fa fa-reply-all"></i>&ensp;Voltar</a>
 
         </div>
     </div>
+    
+    <button class="undo">UNDO</button>
 
 
-    <script src="@Url.Content("~/Scripts/views/commonViews.js")"></script>
+
+
+    <script src="~/Scripts/jquery-2.1.3.min.js"></script>
+    <script src="~/Scripts/myscript/myjquery.js"></script>
+
 
 }
 

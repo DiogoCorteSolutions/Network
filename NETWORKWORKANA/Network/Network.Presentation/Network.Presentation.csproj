@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -331,7 +332,11 @@
     <Compile Include="Models\FornecedorModels.cs" />
     <Compile Include="Models\LoginModels.cs" />
     <Compile Include="Models\PerfilModels.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ProdutoModels.cs" />
+=======
+    <Compile Include="Models\TipoModels.cs" />
+>>>>>>> b2812ae805467fb9ac8ae875985783e0eb252ce9
     <Compile Include="Models\UsuarioModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

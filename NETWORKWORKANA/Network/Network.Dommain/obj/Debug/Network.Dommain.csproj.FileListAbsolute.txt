@@ -18,3 +18,13 @@ D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework
 D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.dll
 D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.pdb
 D:\workspacegit\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.csprojResolveAssemblyReference.cache
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll.config
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\Network.Dommain.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Debug\EntityFramework.SqlServer.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.csprojResolveAssemblyReference.cache
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\obj\Debug\Network.Dommain.pdb

@@ -7,3 +7,12 @@ D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Ent
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.SqlServer.xml
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.dll
 D:\myworkspaces\myprojetc\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.dll.config
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\Network.Dommain.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.SqlServer.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\bin\Release\EntityFramework.SqlServer.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Dommain\obj\Release\Network.Dommain.pdb

@@ -22,3 +22,15 @@ D:\workspacegit\NETWORKWORKANA\Network\Network.Infra\bin\Debug\EntityFramework.S
 D:\workspacegit\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.csprojResolveAssemblyReference.cache
 D:\workspacegit\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.dll
 D:\workspacegit\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\Network.Infra.dll.config
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\Network.Infra.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\Network.Infra.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\EntityFramework.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\Network.Dommain.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\Network.Dommain.pdb
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\EntityFramework.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.csprojResolveAssemblyReference.cache
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.dll
+C:\workspacegit\Network\NETWORKWORKANA\Network\Network.Infra\obj\Debug\Network.Infra.pdb

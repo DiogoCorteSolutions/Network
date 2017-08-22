@@ -60,5 +60,38 @@ namespace Network.Repositories
             this.context.Database.Connection.Dispose();
             this.context.Database.Connection.Close();
         }
+        public IEnumerable<networktipo> ListarTodosTiposCliente()
+        {
+            return this.context.networktipos;
+        }
+        public void ExcluirTipoCliente(int id)
+        {
+            var filtro = this.context.networktipos.Find(id);
+            this.context.Entry(filtro).State = System.Data.Entity.EntityState.Deleted;
+            this.context.SaveChanges();
+        }
+        public void AtualizarTipoCliente(networktipo dto)
+        {
+
+            this.context.Entry(dto).State = System.Data.Entity.EntityState.Modified;
+            this.context.SaveChanges();
+
+        }
+        public void SalvarTipoCliente(networktipo dto)
+        {
+            this.context.networktipos.Add(dto);
+
+            this.context.SaveChanges();
+
+        }
+
+
+        //public Networkcliente ListarTipoPorFiltro(int descricao)
+        //{
+        //    return this.context.networktipos.Find(descricao);
+        //}
+
+
+
     }
 }
